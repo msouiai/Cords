@@ -10,7 +10,7 @@ def read_cords_file(cord_file_name):
     # Marcos Magic ***********
     for line in file:
         if cord_we_are_looking_for in line:
-            print(line)
+            print(f'Esse e o seu campo harmonico = ', line)
     file.close()
 
 
