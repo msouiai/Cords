@@ -7,23 +7,22 @@ def read_cords_file(cord_file_name):
     #print("Reading the following Cords File")
     #print(cord_file_name)
     # Opening file but its not read yet
-    """file = open(cords_file_name,'r')
+    file = open(cords_file_name,'r')
     # Reading the file
     # Marcos Magic ***********
-    if cord_we_are_looking_for == "":
-        print(f'Esse acorde {cord_we_are_looking_for} nao e valido')
-        for line in file:
-            if cord_we_are_looking_for in line:
-                print(f'Esse e o seu campo harmonico = ', line)
+    for line in file:
+        if cord_we_are_looking_for in line:
+            print(f'Esse e o seu campo harmonico = ', line)
     file.close()
     """
     x = pd.read_excel('/Users/marcosvmsa/Cords/Acordes_e_Harmonia.xlsx', engine='openpyxl')
     if cord_we_are_looking_for == x.iloc[29, 2]:
         print(x.iloc[29, 2:9])
+        print(x.index)
     else:
         print(f'Esse acord {cord_we_are_looking_for} nao e valido ')
     #tb = pd.read_excel('Acordes_e_Harmonia.xlsx')
-
+    """
 
 def read_cords(cord_file_name):
     #print("Reading Cords")
