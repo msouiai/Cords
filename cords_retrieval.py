@@ -1,4 +1,5 @@
 import pandas as pd
+import argparse
 
 def process_cords_content(cords_content):
     print("Processing Cord Content")
@@ -36,10 +37,13 @@ def read_cords(cord_file_name):
         # print(cord_we_are_looking_for)
         #print("procurar o acord na lista ")
 
-
-cords_file_name = "simple_acordes_e_harmonia.txt"
-cord_we_are_looking_for = str(input('Digite o Acorde = '))
-#look_for_the_line_where_the_cord_is(cord_we_are_looking_for)
-read_cords(cords_file_name)
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='show the Campo Harmonico')
+    parser.add_argument('chords', type=str, help='cord we are looking for')
+    args = parser.parse_args()
+    cords_file_name = "simple_acordes_e_harmonia.txt"
+    cord_we_are_looking_for = args.chords
+    #look_for_the_line_where_the_cord_is(cord_we_are_looking_for)
+    read_cords(cords_file_name)
 
 
